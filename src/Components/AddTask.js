@@ -26,10 +26,14 @@ const AddTask = () => {
       <InputForm task={tasker}></InputForm>
 
       <div>
+        <hr></hr>
         {addTask.map((item, index) => {
           return (
             <div className={classes.flex} key={index}>
-              <h1 style={{ color: item.bool ? "red" : "black" }}>
+              <h1
+                className={classes.task}
+                style={{ color: item.bool ? "red" : "black" }}
+              >
                 {item.task}
               </h1>
               <button
